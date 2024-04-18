@@ -5,7 +5,6 @@ def main():
     year = date.today().strftime("%y")
     day = date.today().strftime("%d")
     dayname = getDay(year, month)
-    # print(dayname)
     if (checkWeek(dayname, day)):
         print("numerator")
     else: 
@@ -21,13 +20,6 @@ def checkWeek(dayname, day):
     days = int(day)
     if (dayname != "Monday"): 
         is_numerator = False
-    # for i in range(0, days):
-    #     if (i >= 7):
-    #         is_numerator = not is_numerator
-    #         if (days < 0):
-    #             days = -days
-    #         days = 7 - days 
-    #         i = 0
     weeks = float(days / 7) 
     if (weeks % 2 != 0):
         return not is_numerator
